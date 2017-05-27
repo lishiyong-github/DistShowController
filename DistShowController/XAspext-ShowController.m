@@ -22,7 +22,7 @@
 AspectPatch(-, void, viewDidAppear:(BOOL)animated)
 {
     // Add your custom implementation here.
-    if([self isKindOfClass:[UIViewController class]]){
+    if([self isKindOfClass:NSClassFromString(@"SHBaseViewController")]){
         [MessageLabel showMessage:NSStringFromClass([self class])];
     }
     
